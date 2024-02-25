@@ -1,0 +1,12 @@
+The Chainlink Verifiable Random Function (VRF) offers two distinct methods for requesting randomness in smart contracts: the Direct Funding Method and the Subscription Method. Each method caters to different use cases based on the specific needs of the application and its funding preferences.
+
+Direct Funding Method
+The Direct Funding Method is tailored for one-off requests or situations where each request for randomness is independently funded. It does not require setting up a subscription, making it simpler for applications that need randomness sporadically or where end-users bear the cost for each request. This method calculates the cost of the request at the time of the request, allowing for direct payment from the consuming contract. It's particularly suited for applications with infrequent randomness needs or where it's preferable to pass on the cost directly to the user at the time of their transaction.
+
+Subscription Method
+The Subscription Method, on the other hand, is designed for applications that make frequent randomness requests. It involves creating a subscription account that is pre-funded with LINK tokens. This account then funds multiple requests, streamlining the funding process and potentially reducing gas costs associated with funding each request individually. This method is beneficial for developers or applications that centralize the cost of randomness requests, offering a more efficient way to manage and fund ongoing randomness needs. It's particularly well-suited for applications with regular or multiple randomness requests, providing a cost-effective and simplified funding mechanism.
+
+Use Cases and Suitability
+Direct Funding Method: Best for applications with occasional randomness needs or where the economic model requires users to pay for their own randomness requests. It's straightforward and eliminates the need for managing a subscription, making it ideal for simpler, less frequent use cases.
+
+Subscription Method: More advisable for applications concerned about optimizing gas prices for multiple requests and those requiring many random words in a single request. This method is suitable for complex applications with frequent randomness needs, such as decentralized games, lotteries, or any application that benefits from bulk funding to manage and reduce transaction costs.
